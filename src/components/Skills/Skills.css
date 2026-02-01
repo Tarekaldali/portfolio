@@ -1,0 +1,77 @@
+.skills-section {
+  padding: 6rem 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.skills-container {
+  max-width: 900px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, rgba(30, 30, 40, 0.6) 0%, rgba(20, 20, 30, 0.6) 100%);
+  border: 1px solid #252530;
+  border-radius: 20px;
+  padding: 3rem;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.skill-tag {
+  padding: 0.7rem 1.5rem;
+  border: 2px solid;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  background: transparent;
+  cursor: default;
+  transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.skills-legend {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.legend-text {
+  color: #808080;
+  font-size: 0.9rem;
+  text-transform: capitalize;
+}
+
+@media (max-width: 768px) {
+  .skills-container {
+    padding: 2rem 1.5rem;
+  }
+
+  .skill-tag {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  .skills-legend {
+    gap: 1rem;
+  }
+}

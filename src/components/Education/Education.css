@@ -1,0 +1,187 @@
+.education-section {
+  padding: 6rem 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.education-card {
+  background: linear-gradient(135deg, rgba(30, 30, 40, 0.9) 0%, rgba(20, 20, 30, 0.9) 100%);
+  border: 1px solid #252530;
+  border-radius: 20px;
+  padding: 3rem;
+  display: flex;
+  gap: 3rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+}
+
+.education-card:hover {
+  border-color: #00d9ff40;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+.education-logo {
+  flex-shrink: 0;
+}
+
+.education-logo img {
+  width: 160px;
+  height: 160px;
+  object-fit: contain;
+  border-radius: 20px;
+  background: #fff;
+  padding: 15px;
+  box-shadow: 0 10px 30px rgba(0, 217, 255, 0.15);
+  transition: all 0.3s ease;
+}
+
+.education-logo img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 40px rgba(0, 217, 255, 0.25);
+}
+
+.logo-fallback {
+  display: none;
+  width: 160px;
+  height: 160px;
+  background: linear-gradient(135deg, #1a5f3c 0%, #0d3d26 100%);
+  border-radius: 20px;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  font-weight: 800;
+  color: #fff;
+}
+
+.education-content {
+  flex: 1;
+}
+
+.university-name {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 0.3rem;
+}
+
+.degree-name {
+  font-size: 1.2rem;
+  color: #00d9ff;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.education-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #808080;
+  font-size: 0.95rem;
+}
+
+.meta-item svg {
+  color: #00d9ff;
+}
+
+.education-description {
+  color: #a0a0a0;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.courses-section {
+  margin-bottom: 1.5rem;
+}
+
+.courses-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.courses-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.course-tag {
+  padding: 0.5rem 1rem;
+  background: rgba(0, 217, 255, 0.1);
+  border: 1px solid rgba(0, 217, 255, 0.3);
+  color: #00d9ff;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.course-tag:hover {
+  background: rgba(0, 217, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.education-highlights {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.education-highlights li {
+  position: relative;
+  padding-left: 1.5rem;
+  color: #a0a0a0;
+  font-size: 0.95rem;
+  margin-bottom: 0.7rem;
+  line-height: 1.6;
+}
+
+.education-highlights li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.6rem;
+  width: 6px;
+  height: 6px;
+  background: #00d9ff;
+  border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+  .education-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .education-logo img {
+    width: 140px;
+    height: 140px;
+  }
+
+  .university-name {
+    font-size: 1.5rem;
+  }
+
+  .education-meta {
+    justify-content: center;
+  }
+
+  .courses-grid {
+    justify-content: center;
+  }
+
+  .education-highlights li {
+    text-align: left;
+  }
+}
