@@ -13,14 +13,7 @@ import { FaEnvelope, FaGithub, FaLinkedin, FaPaperPlane, FaArrowLeft } from 'rea
 import { Link } from 'react-router-dom';
 import './ContactPage.css';
 
-// ============================================
-// TYPESCRIPT INTERFACES (Type Definitions)
-// ============================================
 
-/**
- * ContactInfo - Defines the shape of contact information
- * BEGINNER TIP: Interfaces tell TypeScript what properties an object should have
- */
 interface ContactInfo {
   email: string;
   github: string;
@@ -29,49 +22,24 @@ interface ContactInfo {
   linkedinUrl: string;
 }
 
-/**
- * ContactPageProps - Props that this component accepts
- * BEGINNER TIP: Props are like function parameters for React components
- */
+
 interface ContactPageProps {
-  // The page title (optional - has a default value)
   title?: string;
-  // The subtitle shown below the title (optional)
   subtitle?: string;
-  // Contact information to display (optional - has defaults)
   contactInfo?: ContactInfo;
-  // Whether to show the contact form (optional - default is true)
   showForm?: boolean;
 }
 
-// ============================================
-// DEFAULT VALUES
-// ============================================
 
-/**
- * Default contact information
- * BEGINNER TIP: We define defaults so the component works even without props
- */
 const defaultContactInfo: ContactInfo = {
-  email: 'tarekaldali1@gmail.com',
-  github: '@tarekaldali',
-  githubUrl: 'https://github.com/tarekaldali',
-  linkedin: 'Tarek Al Dali',
-  linkedinUrl: 'https://www.linkedin.com/in/tarek-y-al-dali/',
+  email: '',
+  github: '',
+  githubUrl: '',
+  linkedin: '',
+  linkedinUrl: '',
 };
 
-// ============================================
-// MAIN COMPONENT
-// ============================================
 
-/**
- * ContactPage Component
- * 
- * BEGINNER TIP: We use destructuring with default values in the function parameters.
- * This means if a prop isn't provided, it uses the default value instead.
- * 
- * Example: title = "Get In Touch" means if no title is passed, use "Get In Touch"
- */
 const ContactPage = ({
   title = 'Get In Touch',
   subtitle = "Let's work together on your next project",
@@ -79,16 +47,9 @@ const ContactPage = ({
   showForm = true,
 }: ContactPageProps) => {
   
-  // ============================================
-  // RENDER (What the component displays)
-  // ============================================
-  
+
   return (
     <div className="contact-page">
-      {/* Back Button - Takes user back to home page */}
-      <Link to="/" className="back-button">
-        <FaArrowLeft /> Back to Home
-      </Link>
 
       <div className="contact-page-container">
         {/* Page Header with Animation */}

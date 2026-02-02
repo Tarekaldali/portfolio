@@ -9,15 +9,15 @@
  */
 
 import { Routes, Route } from 'react-router-dom';
-import StarBackground from './components/StarBackground';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Journey from './components/Journey';
-import Education from './components/Education';
-import Projects from './components/Projects';
-import Skills from './components/Skills';
-import Footer from './components/Footer';
-import ContactPage from './pages/ContactPage';
+import StarBackground from './components/StarBackground/StarBackground';
+import Navbar from './components/Navbar/Navbar';
+import Hero from './components/Hero/Hero';
+import Journey from './components/Journey/Journey';
+import Education from './components/Education/Education';
+import Projects from './components/Projects/Projects';
+import Skills from './components/Skills/Skills';
+import Footer from './components/Footer/Footer';
+import ContactPage from './pages/ContactPage/ContactPage';
 import './App.css';
 
 /**
@@ -51,26 +51,21 @@ const HomePage = () => {
 function App() {
   return (
     <div className="app">
-      {/* These components appear on ALL pages */}
       <StarBackground />
-      <Navbar />
-      
-      {/* Main content area with Routes */}
+      <Navbar />   
       <main>
         <Routes>
-          {/* Home page - shows all sections */}
           <Route path="/" element={<HomePage />} />
           
-          {/* Contact page - separate page with props example */}
           <Route 
             path="/contact" 
             element={
               <ContactPage 
-                // You can customize these props!
+               
                 title="Let's Connect"
                 subtitle="I'd love to hear from you"
                 showForm={true}
-                // contactInfo is optional - uses defaults if not provided
+                contactInfo={{email: 'tarekaldali1@gmail.com', github: '@tarekaldali', githubUrl: 'https://github.com/tarekaldali', linkedin: 'Tarek Al Dali', linkedinUrl: 'https://www.linkedin.com/in/tarek-y-al-dali/'}}
               />
             } 
           />
