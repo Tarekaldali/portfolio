@@ -4,25 +4,6 @@ import { FaEnvelope, FaGithub, FaLinkedin, FaPaperPlane } from 'react-icons/fa';
 import './Contact.css';
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
-  });
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle form submission
-    const mailtoLink = `mailto:tarekaldali1@gmail.com?subject=Portfolio Contact from ${formData.name}&body=${formData.message}%0A%0AFrom: ${formData.email}`;
-    window.location.href = mailtoLink;
-  };
-
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
 
   return (
     <section id="contact" className="contact-section">
@@ -86,8 +67,7 @@ const Contact = () => {
           </motion.div>
 
           <motion.form
-            className="contact-form"
-            onSubmit={handleSubmit}
+            className="contact-form"  
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -99,8 +79,8 @@ const Contact = () => {
                 type="text"
                 id="name"
                 name="name"
-                value={formData.name}
-                onChange={handleChange}
+                
+                
                 required
                 placeholder="Your name"
               />
@@ -112,8 +92,6 @@ const Contact = () => {
                 type="email"
                 id="email"
                 name="email"
-                value={formData.email}
-                onChange={handleChange}
                 required
                 placeholder="your@email.com"
               />
@@ -124,8 +102,6 @@ const Contact = () => {
               <textarea
                 id="message"
                 name="message"
-                value={formData.message}
-                onChange={handleChange}
                 required
                 placeholder="Your message..."
                 rows="5"

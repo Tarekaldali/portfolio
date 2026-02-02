@@ -51,7 +51,7 @@ const Education = () => {
             
             <div className="education-meta">
               <span className="meta-item">
-                <FaCalendarAlt />
+                <FaCalendarAlt /> 
                 October 2022 - 2026
               </span>
               <span className="meta-item">
