@@ -1,12 +1,4 @@
-/**
- * App.tsx
- * 
- * Main Application Component with React Router
- * 
- * BEGINNER TIP: Routes define which component shows for which URL path.
- * - "/" shows the HomePage (all your sections)
- * - "/contact" shows the ContactPage
- */
+
 
 import { Routes, Route } from 'react-router-dom';
 import StarBackground from './components/StarBackground/StarBackground';
@@ -20,12 +12,7 @@ import Footer from './components/Footer/Footer';
 import ContactPage from './pages/ContactPage/ContactPage';
 import './App.css';
 
-/**
- * HomePage Component
- * 
- * This contains all the sections that appear on the main page.
- * We extracted it into a separate component for cleaner code.
- */
+
 const HomePage = () => {
   return (
     <>
@@ -34,20 +21,12 @@ const HomePage = () => {
       <Education />
       <Projects />
       <Skills />
-      {/* Contact section removed - now it's a separate page! */}
+      
     </>
   );
 };
 
-/**
- * App Component
- * 
- * This is the root component that sets up:
- * 1. The star background (appears on all pages)
- * 2. The navbar (appears on all pages)
- * 3. Routes for different pages
- * 4. The footer (appears on all pages)
- */
+
 function App() {
   return (
     <div className="app">
@@ -72,7 +51,7 @@ function App() {
         </Routes>
       </main>
       
-      {/* Footer appears on all pages */}
+      
       <Footer />
     </div>
   );

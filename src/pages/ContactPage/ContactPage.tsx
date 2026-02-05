@@ -1,12 +1,4 @@
-/**
- * ContactPage.tsx
- * 
- * This is a separate page for the Contact section.
- * It uses TypeScript with Props to make the component reusable.
- * 
- * BEGINNER TIP: Props allow you to pass data into components,
- * making them flexible and reusable!
- */
+
 
 import { motion } from 'framer-motion';
 import { FaEnvelope, FaGithub, FaLinkedin, FaPaperPlane, FaArrowLeft } from 'react-icons/fa';
@@ -52,7 +44,7 @@ const ContactPage = ({
     <div className="contact-page">
 
       <div className="contact-page-container">
-        {/* Page Header with Animation */}
+        
         <motion.div
           className="contact-page-header"
           initial={{ opacity: 0, y: 30 }}
@@ -64,7 +56,7 @@ const ContactPage = ({
         </motion.div>
 
         <div className="contact-page-content">
-          {/* Left Side - Contact Information */}
+          
           <motion.div
             className="contact-info-section"
             initial={{ opacity: 0, x: -50 }}
@@ -77,9 +69,9 @@ const ContactPage = ({
               or opportunities to be part of your vision.
             </p>
 
-            {/* Contact Links */}
+            
             <div className="contact-links">
-              {/* Email Link */}
+              
               <a href={`mailto:${contactInfo.email}`} className="contact-link">
                 <div className="link-icon">
                   <FaEnvelope />
@@ -90,7 +82,7 @@ const ContactPage = ({
                 </div>
               </a>
 
-              {/* GitHub Link */}
+              
               <a 
                 href={contactInfo.githubUrl} 
                 target="_blank" 
@@ -106,7 +98,7 @@ const ContactPage = ({
                 </div>
               </a>
 
-              {/* LinkedIn Link */}
+              
               <a 
                 href={contactInfo.linkedinUrl} 
                 target="_blank" 
@@ -124,7 +116,7 @@ const ContactPage = ({
             </div>
           </motion.div>
 
-          {/* Right Side - Contact Form (only shown if showForm is true) */}
+          
           {showForm && (
             <motion.form
               className="contact-form"
@@ -132,7 +124,7 @@ const ContactPage = ({
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
-              {/* Name Field */}
+              
               <div className="form-group">
                 <label htmlFor="name">Name</label>
                 <input
@@ -144,7 +136,7 @@ const ContactPage = ({
                 />
               </div>
 
-              {/* Email Field */}
+              
               <div className="form-group">
                 <label htmlFor="email">Email</label>
                 <input
@@ -156,7 +148,7 @@ const ContactPage = ({
                 />
               </div>
 
-              {/* Message Field */}
+              
               <div className="form-group">
                 <label htmlFor="message">Message</label>
                 <textarea
@@ -168,7 +160,7 @@ const ContactPage = ({
                 />
               </div>
 
-              {/* Submit Button */}
+              
               <button type="submit" className="submit-btn">
                 <FaPaperPlane /> Send Message
               </button>
@@ -180,5 +172,5 @@ const ContactPage = ({
   );
 };
 
-// Export the component so other files can use it
+
 export default ContactPage;

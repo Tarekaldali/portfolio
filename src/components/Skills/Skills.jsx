@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import './Skills.css';
 
 const skillsData = [
-  // Languages
+  
   { name: 'JavaScript', category: 'language', color: '#f7df1e' },
   { name: 'TypeScript', category: 'language', color: '#3178c6' },
   { name: 'Python', category: 'language', color: '#3776ab' },
@@ -11,19 +11,19 @@ const skillsData = [
   { name: 'Java', category: 'language', color: '#ed8b00' },
   { name: 'SQL', category: 'language', color: '#336791' },
   
-  // Frontend
+  
   { name: 'React', category: 'frontend', color: '#61dafb' },
   { name: 'Next.js', category: 'frontend', color: '#ffffff' },
   { name: 'HTML5', category: 'frontend', color: '#e34f26' },
   { name: 'CSS3', category: 'frontend', color: '#1572b6' },
   
-  // Backend & Database
+  
   { name: 'Node.js', category: 'backend', color: '#339933' },
   { name: 'Supabase', category: 'backend', color: '#3ecf8e' },
   { name: 'MySQL', category: 'backend', color: '#4479a1' },
   { name: 'phpMyAdmin', category: 'backend', color: '#6c78af' },
   
-  // Mobile & Other
+  
   { name: 'Flutter', category: 'mobile', color: '#02569b' },
   { name: 'REST APIs', category: 'other', color: '#ff6c37' },
   { name: 'Git', category: 'other', color: '#f05032' },

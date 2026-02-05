@@ -1,7 +1,4 @@
-/**
- * ContactPage.css
- * Styles for the standalone Contact page
- */
+
 
 .contact-page {
   min-height: 100vh;
@@ -10,7 +7,7 @@
   position: relative;
 }
 
-/* Back Button */
+
 .back-button {
   display: inline-flex;
   align-items: center;
@@ -31,13 +28,13 @@
   transform: translateX(-5px);
 }
 
-/* Container */
+
 .contact-page-container {
   max-width: 1200px;
   margin: 0 auto;
 }
 
-/* Header */
+
 .contact-page-header {
   text-align: center;
   margin-bottom: 4rem;
@@ -58,7 +55,7 @@
   color: #a0a0a0;
 }
 
-/* Content Grid */
+
 .contact-page-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -66,7 +63,7 @@
   align-items: start;
 }
 
-/* Contact Info Section */
+
 .contact-info-section {
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid rgba(255, 255, 255, 0.05);
@@ -86,7 +83,7 @@
   margin-bottom: 2rem;
 }
 
-/* Contact Links */
+
 .contact-links {
   display: flex;
   flex-direction: column;
@@ -138,7 +135,7 @@
   font-weight: 500;
 }
 
-/* Contact Form */
+
 .contact-form {
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid rgba(255, 255, 255, 0.05);
@@ -208,7 +205,7 @@
   box-shadow: 0 10px 30px rgba(0, 217, 255, 0.3);
 }
 
-/* Responsive Design */
+
 @media (max-width: 900px) {
   .contact-page-content {
     grid-template-columns: 1fr;

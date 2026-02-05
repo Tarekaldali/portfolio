@@ -64,7 +64,7 @@
   padding: 1.5rem;
 }
 
-/* Desktop/Web app screenshots */
+
 .project-image.desktop {
   padding: 1rem;
 }
@@ -77,7 +77,7 @@
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
 }
 
-/* Mobile app screenshots */
+
 .project-image.mobile {
   background: linear-gradient(135deg, #4a90e2 0%, #67b8e8 100%);
   padding: 2rem;
@@ -92,7 +92,7 @@
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
 }
 
-/* Logo type images */
+
 .project-image.logo {
   background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
   padding: 3rem;

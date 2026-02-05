@@ -93,7 +93,7 @@ const Hero = () => {
           <div className="image-wrapper">
             <div className="image-glow"></div>
             <div className="profile-placeholder">
-              <img src="src/assets/ChatGPT Image Feb 2, 2026, 01_06_12 AM.png" alt="" />
+              <img src="assets/ChatGPT Image Feb 2, 2026, 01_06_12 AM.png" alt="" />
             </div>
           </div>    
         </motion.div>
