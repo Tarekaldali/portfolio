@@ -111,7 +111,7 @@ const Navbar = () => {
           
           
           <a
-            href="/Tarek Al Dali - Resume.pdf"
+            href="/tarekaldali-cv.pdf"
             download
             className="resume-btn"
           >
