@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 import './Hero.css';
+import profileImage from '../../assets/ChatGPT Image Feb 2, 2026, 01_06_12 AM.png';
 
 const Hero = () => {
   return (
@@ -93,7 +94,7 @@ const Hero = () => {
           <div className="image-wrapper">
             <div className="image-glow"></div>
             <div className="profile-placeholder">
-              <img src="public/projects/ChatGPT Image Feb 2, 2026, 01_06_12 AM.png" alt="" />
+              <img src={profileImage} alt="Tarek Al Dali portrait" />
             </div>
           </div>    
         </motion.div>
