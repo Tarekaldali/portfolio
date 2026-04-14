@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { FaMapMarkerAlt, FaCalendarAlt } from 'react-icons/fa';
 import './Education.css';
+import liuLogo from '../../assets/LIU-logo.png';
 
 const Education = () => {
   const courses = [
@@ -35,7 +36,7 @@ const Education = () => {
         >
           <div className="education-logo">
             <img 
-              src="src/assets/LIU-logo.png" 
+              src={liuLogo}
               alt="LIU Logo"
               onError={(e) => {
                 e.target.style.display = 'none';
