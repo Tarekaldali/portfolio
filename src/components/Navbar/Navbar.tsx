@@ -112,7 +112,7 @@ const Navbar = () => {
           
           <a
             href="/tarekaldali-cv.pdf"
-            download
+            download="Tarek-Al-Dali-CV.pdf"
             className="resume-btn"
           >
             Resume
