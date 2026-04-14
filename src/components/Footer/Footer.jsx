@@ -30,11 +30,6 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="footer-bottom">
-          <p>
-            © {currentYear} Tarek Al Dali. Made with <FaHeart className="heart-icon" /> in Lebanon
-          </p>
-        </div>
       </div>
     </footer>
   );
