@@ -3,8 +3,8 @@ import { motion } from 'framer-motion';
 import { HiMenu, HiX } from 'react-icons/hi';
 import { Link, useLocation } from 'react-router-dom';
 import './Navbar.css';
-
-
+import cvPdf from '../../assets/tarek_aldali_cv.pdf';
+import cvDocx from '../../assets/tarek_aldali_cv (3).docx';
 
 interface NavLink {
   name: string;
@@ -12,34 +12,20 @@ interface NavLink {
   type: 'anchor' | 'route'; 
 }
 
-
-
 const Navbar = () => {
-  
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
-  
-  
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
-  
-  
   const location = useLocation();
 
-  
   useEffect(() => {
     const handleScroll = () => {
-      
       setIsScrolled(window.scrollY > 50);
     };
     
-    
     window.addEventListener('scroll', handleScroll);
-    
-    
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  
-  
   const navLinks: NavLink[] = [
     { name: 'Home', href: '/', type: 'route' },
     { name: 'Journey', href: '/#journey', type: 'anchor' },
@@ -49,10 +35,8 @@ const Navbar = () => {
     { name: 'Contact', href: '/contact', type: 'route' }, 
   ];
 
-  
   const handleNavClick = (link: NavLink) => {
     setIsMobileMenuOpen(false);
-    
     
     if (link.type === 'anchor' && location.pathname === '/') {
       const sectionId = link.href.replace('/#', '');
@@ -63,6 +47,28 @@ const Navbar = () => {
     }
   };
 
+  const handleResumeClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    
+    // Download PDF
+    const linkPdf = document.createElement('a');
+    linkPdf.href = cvPdf;
+    linkPdf.download = 'Tarek_Al_Dali_CV.pdf';
+    document.body.appendChild(linkPdf);
+    linkPdf.click();
+    document.body.removeChild(linkPdf);
+
+    // Download DOCX after a short delay
+    setTimeout(() => {
+      const linkDocx = document.createElement('a');
+      linkDocx.href = cvDocx;
+      linkDocx.download = 'Tarek_Al_Dali_CV.docx';
+      document.body.appendChild(linkDocx);
+      linkDocx.click();
+      document.body.removeChild(linkDocx);
+    }, 300);
+  };
+
   return (
     <motion.nav
       className={`navbar ${isScrolled ? 'scrolled' : ''}`}
@@ -71,13 +77,11 @@ const Navbar = () => {
       transition={{ duration: 0.5 }}
     >
       <div className="navbar-container">
-        
         <Link to="/" className="navbar-logo">
           <span className="logo-text">Tarek</span>
           <span className="logo-dot">.</span>
         </Link>
 
-        
         <div className={`nav-links ${isMobileMenuOpen ? 'active' : ''}`}>
           {navLinks.map((link, index) => (
             <motion.div
@@ -86,9 +90,7 @@ const Navbar = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
             >
-              
               {link.type === 'route' ? (
-                
                 <Link
                   to={link.href}
                   className={`nav-link ${location.pathname === link.href ? 'active' : ''}`}
@@ -97,7 +99,6 @@ const Navbar = () => {
                   {link.name}
                 </Link>
               ) : (
-                
                 <Link
                   to={link.href}
                   className="nav-link"
@@ -109,17 +110,15 @@ const Navbar = () => {
             </motion.div>
           ))}
           
-          
           <a
-            href="/tarekaldali-cv.pdf"
-            download="Tarek-Al-Dali-CV.pdf"
+            href={cvPdf}
+            onClick={handleResumeClick}
             className="resume-btn"
           >
             Resume
           </a>
         </div>
 
-        
         <button
           className="mobile-menu-btn"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}

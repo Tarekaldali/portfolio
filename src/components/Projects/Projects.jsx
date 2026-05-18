@@ -6,6 +6,7 @@ import aiImagePlatformImage from '../../assets/image.png';
 import tripBookingImage from '../../assets/Screenshot 2025-05-30 192643.png';
 import footballLogo from '../../assets/aeRNYjKS_400x400.jpg';
 import qaScraperImage from '../../assets/image-14.png';
+import leadLinxImage from '../../assets/Screenshot 2026-05-19 000402.png';
 
 const projectsData = [
   {
@@ -48,7 +49,7 @@ const projectsData = [
     id: 5,
     title: 'Instagram Post Generator',
     description: 'A full-stack SaaS platform that generates Instagram-ready hooks, captions, hashtags, and preview images with persistence and fallback handling.',
-    image: aiImagePlatformImage,
+    image: null,
     tags: ['Vue 3', 'NestJS', 'TypeScript', 'MongoDB Atlas', 'OpenRouter'],
     color: '#ef4444',
     type: 'desktop',
@@ -58,7 +59,7 @@ const projectsData = [
     id: 6,
     title: 'AffordaHome',
     description: 'Shelter Finder Lebanon, a production-ready platform that helps displaced families find housing while organizations manage listings through a secure dashboard.',
-    image: tripBookingImage,
+    image: null,
     tags: ['Next.js', 'TypeScript', 'MongoDB Atlas', 'NextAuth', 'Tailwind CSS'],
     color: '#f97316',
     type: 'desktop',
@@ -68,7 +69,7 @@ const projectsData = [
     id: 7,
     title: 'ArchiCore',
     description: 'A complete architecture-focused web platform with public pages, blog/news, project showcases, and an admin area to manage all content.',
-    image: qaScraperImage,
+    image: null,
     tags: ['Next.js App Router', 'TypeScript', 'MongoDB', 'Cloudinary', 'Admin CMS'],
     color: '#06b6d4',
     type: 'desktop',
@@ -78,7 +79,7 @@ const projectsData = [
     id: 8,
     title: 'Gifty',
     description: 'A full-stack gifting web application with a dedicated frontend and backend server architecture for managing gift-oriented user experiences.',
-    image: footballLogo,
+    image: null,
     tags: ['JavaScript', 'Node.js', 'Express', 'Frontend UI', 'REST API'],
     color: '#22c55e',
     type: 'logo',
@@ -86,18 +87,19 @@ const projectsData = [
   },
   {
     id: 9,
-    title: '3D Ecommerce Website',
-    description: 'An ecommerce experience that displays interactive 3D objects for each product, helping customers inspect items before purchasing.',
-    image: aiImagePlatformImage,
-    tags: ['React', 'Three.js', '3D Product Viewer', 'Ecommerce', 'UI/UX'],
-    color: '#2563eb',
+    title: 'LeadLinx',
+    description: 'An AI-powered Reddit lead generation SaaS platform. Features an advanced intent-filtering engine, automated background extraction, secure role-based authentication, and a comprehensive admin dashboard for analytics and revenue tracking.',
+    image: leadLinxImage,
+    tags: ['Next.js', 'TypeScript', 'MongoDB', 'AI Lead Generation', 'Tailwind CSS'],
+    color: '#8b5cf6',
     type: 'desktop',
+    githubUrl: 'https://github.com/Tarekaldali/LeadLinx',
   },
   {
     id: 10,
     title: 'AI Bot Platform (Private)',
     description: 'A private platform that provides other websites with AI customer-service bots for automated support, faster replies, and improved user assistance.',
-    image: qaScraperImage,
+    image: null,
     tags: ['AI Assistant', 'Customer Service', 'Website Integration', 'Automation'],
     color: '#eab308',
     type: 'desktop',
@@ -147,13 +149,15 @@ const Projects = () => {
                 transition={{ duration: 0.4 }}
                 style={{ borderColor: `${currentProject.color}40` }}
               >
-                <div className={`project-image ${currentProject.type}`}>
-                  <img 
-                    src={currentProject.image} 
-                    alt={currentProject.title}
-                    className={`project-img ${currentProject.type}`}
-                  />
-                </div>
+                {currentProject.image && (
+                  <div className={`project-image ${currentProject.type}`}>
+                    <img 
+                      src={currentProject.image} 
+                      alt={currentProject.title}
+                      className={`project-img ${currentProject.type}`}
+                    />
+                  </div>
+                )}
 
                 <div className="project-content">
                   <div className="project-title-row">
