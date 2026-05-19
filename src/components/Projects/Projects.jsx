@@ -26,6 +26,7 @@ const projectsData = [
     tags: ['Dart', 'Flutter', 'Supabase', 'Mobile Development'],
     color: '#f59e0b',
     type: 'mobile',
+    githubUrl: 'https://github.com/Tarekaldali/Trip-Booking-Mobile-App.git',
   },
   {
     id: 3,

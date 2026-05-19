@@ -36,7 +36,7 @@ const journeyData = [
   },
   {
     id: 3,
-    period: '3 Months Program',
+    period: '5 Months Program',
     title: 'Programming & Communication Skills',
     organization: 'STC Digital Hub',
     description: 'Intensive training program focused on technical and soft skills',
