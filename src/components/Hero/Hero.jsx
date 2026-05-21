@@ -79,7 +79,7 @@ const Hero = () => {
             <a href="https://www.linkedin.com/in/tarek-y-al-dali/" target="_blank" rel="noopener noreferrer" className="social-link">
               <FaLinkedin />
             </a>
-            <a href="mailto:tarekaldali1@gmail.com" className="social-link">
+            <a href="mailto:tarekaldali1234@gmail.com" className="social-link">
               <FaEnvelope />
             </a>
           </motion.div>

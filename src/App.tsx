@@ -44,7 +44,7 @@ function App() {
                 title="Let's Connect"
                 subtitle="I'd love to hear from you"
                 showForm={true}
-                contactInfo={{email: 'tarekaldali1@gmail.com', github: '@tarekaldali', githubUrl: 'https://github.com/tarekaldali', linkedin: 'Tarek Al Dali', linkedinUrl: 'https://www.linkedin.com/in/tarek-y-al-dali/'}}
+                contactInfo={{email: 'tarekaldali1234@gmail.com', github: '@tarekaldali', githubUrl: 'https://github.com/tarekaldali', linkedin: 'Tarek Al Dali', linkedinUrl: 'https://www.linkedin.com/in/tarek-y-al-dali/'}}
               />
             } 
           />
